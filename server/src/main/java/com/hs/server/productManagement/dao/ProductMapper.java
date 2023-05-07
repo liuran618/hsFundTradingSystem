@@ -1,6 +1,6 @@
-package com.hs.server.dao;
+package com.hs.server.productManagement.dao;
 
-import com.hs.api.dto.ProductDTO;
+import com.hs.api.productManagement.dto.ProductDTO;
 import org.apache.ibatis.annotations.*;
 
 @Mapper

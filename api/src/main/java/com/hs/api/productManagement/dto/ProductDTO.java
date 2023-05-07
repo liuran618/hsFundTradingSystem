@@ -1,4 +1,4 @@
-package com.hs.api.dto;
+package com.hs.api.productManagement.dto;
 
 public class ProductDTO {
     private Integer productId;

@@ -1,6 +1,6 @@
-package com.hs.api;
+package com.hs.api.productManagement;
 
-import com.hs.api.dto.ProductDTO;
+import com.hs.api.productManagement.dto.ProductDTO;
 import com.hundsun.jrescloud.rpc.annotation.CloudService;
 
 @CloudService(validation = true)

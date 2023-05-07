@@ -1,8 +1,8 @@
-package com.hs.server.imp;
+package com.hs.server.productManagement.dao.imp;
 
-import com.hs.api.ProductService;
-import com.hs.api.dto.ProductDTO;
-import com.hs.server.dao.ProductMapper;
+import com.hs.api.productManagement.ProductService;
+import com.hs.api.productManagement.dto.ProductDTO;
+import com.hs.server.productManagement.dao.ProductMapper;
 import com.hundsun.jrescloud.rpc.annotation.CloudComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

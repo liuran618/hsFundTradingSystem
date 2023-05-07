@@ -1,7 +1,7 @@
-package com.hs.client.controller;
+package com.hs.client.productManagemnet.controller;
 
-import com.hs.api.ProductService;
-import com.hs.api.dto.ProductDTO;
+import com.hs.api.productManagement.ProductService;
+import com.hs.api.productManagement.dto.ProductDTO;
 import com.hundsun.jrescloud.rpc.annotation.CloudReference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
