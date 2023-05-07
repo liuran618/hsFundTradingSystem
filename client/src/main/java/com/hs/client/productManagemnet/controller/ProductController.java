@@ -27,4 +27,16 @@ public class ProductController {
         return productService.getProduct(1);
     }
 
+    @RequestMapping("/updateProduct")
+    public String updateProduct(){
+        ProductDTO productDTO = new ProductDTO();
+        productDTO.setProductId(2);
+        productDTO.setProductName("ABC Product");
+        productDTO.setProductType("Type A");
+        productDTO.setProductInfo("A is ok");
+        productDTO.setProductManager("小h");
+        int judge = productService.updateProduct(productDTO);
+        return "更新产品"+ judge;
+    }
+
 }

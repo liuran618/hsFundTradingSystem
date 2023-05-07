@@ -1,4 +1,4 @@
-package com.hs.server.productManagement.dao.imp;
+package com.hs.server.productManagement.imp;
 
 import com.hs.api.productManagement.ProductService;
 import com.hs.api.productManagement.dto.ProductDTO;
@@ -29,7 +29,8 @@ public class ProductServiceImp implements ProductService {
 
     @Override
     public Integer updateProduct(ProductDTO productDTO) {
-        return null;
+        int judge = productMapper.updateProduct(productDTO);
+        return judge;
     }
 
     @Override
