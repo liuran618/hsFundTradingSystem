@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.hs.common.Result;
 @RestController
-@RequestMapping("/Product")
+@RequestMapping("/product")
 public class ProductController {
     @CloudReference
     private ProductService productService;

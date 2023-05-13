@@ -2,26 +2,29 @@ package com.hs.server.trade.imp;
 
 import com.hs.api.trade.TradeService;
 import com.hs.api.trade.dto.OrderDTO;
-import com.hs.server.trade.dao.TradeMapper;
+import com.hs.server.trade.dao.OrderMapper;
 import com.hundsun.jrescloud.rpc.annotation.CloudComponent;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @CloudComponent
 public class TradeServiceImp implements TradeService {
     @Autowired
-    TradeMapper tradeMapper;
+    OrderMapper orderMapper;
+
     @Override
-    public Integer purchase(OrderDTO orderDTO) {
-        return null;
+    public Integer addOrder(OrderDTO orderDTO) {
+        System.out.println(orderDTO.getOrderId());
+        return orderMapper.addOrder(orderDTO);
     }
 
     @Override
-    public Integer redemption(OrderDTO orderDTO) {
-        return null;
+    public OrderDTO getOrder(Integer orderId) {
+        return orderMapper.getOrder(orderId);
     }
 
     @Override
-    public Integer revocation(OrderDTO orderDTO) {
-        return tradeMapper.updateOrder(orderDTO);
+    public Integer updateOrder(OrderDTO orderDTO) {
+        System.out.println(orderDTO.getOrderId());
+        return orderMapper.updateOrder(orderDTO);
     }
 }

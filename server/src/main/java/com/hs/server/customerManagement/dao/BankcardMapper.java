@@ -19,6 +19,6 @@ public interface BankcardMapper {
             + "bankcard_balance AS bankcardBalance FROM Bankcard WHERE bankcard_num=#{num}")
     BankcardDTO getBankcard(String num);
 
-    @Delete("DELETE FROM bankcard WHERE bankcard_num = #{bankcardNum}")
-    Integer deleteBankcard(@Param("bankCardNum") String num);
+    @Delete("DELETE FROM bankcard WHERE bankcard_num = #{num}")
+    Integer deleteBankcard(String num);
 }

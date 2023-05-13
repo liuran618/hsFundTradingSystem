@@ -5,9 +5,9 @@ import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface ProductMapper {
-    @Insert("INSERT INTO Product (Product_Name, Product_Type, Product_RiskLevel, Product_NetvalueYesterday, Product_NetvalueToday, Product_TotalShare, Product_Manager, Product_Info, Product_PurchaseRate, Product_SellingRate, Product_ManageRate) " +
+    @Insert("INSERT INTO Product (Product_Id,Product_Name, Product_Type, Product_RiskLevel, Product_NetvalueYesterday, Product_NetvalueToday, Product_TotalShare, Product_Manager, Product_Info, Product_PurchaseRate, Product_SellingRate, Product_ManageRate) " +
             "VALUES (" +
-            "        #{product.productName}, #{product.productType}, #{product.productRiskLevel}," +
+            "        #{product.productId}, #{product.productName}, #{product.productType}, #{product.productRiskLevel}," +
             "        #{product.productNetValueYesterday}, #{product.productNetValueToday}, #{product.productTotalShare}," +
             "        #{product.productManager}, #{product.productInfo}, #{product.productPurchaseRate}, #{product.productSellingRate}, #{product.productManageRate}" +
             "    )")

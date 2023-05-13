@@ -4,13 +4,13 @@ import com.hs.api.trade.dto.OrderDTO;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
-public interface TradeMapper {
+public interface OrderMapper {
 
-    @Insert("INSERT INTO Orders(Order_Type, Order_CustomerId, Order_ProductId, "
+    @Insert("INSERT INTO Orders(Order_Id, Order_Type, Order_CustomerId, Order_ProductId, "
             + "Order_OperatorId, Order_PurchaseAmount, Order_ExpectedShare, "
             + "Order_BankcardNum, Order_RedeemShare, Order_ExpectedIncome, "
             + "Order_Time, Order_Status) "
-            + "VALUES (#{order.orderType},#{order.orderCustomerId},"
+            + "VALUES (#{order.orderId},#{order.orderType},#{order.orderCustomerId},"
             + "#{order.orderProductId},#{order.orderOperatorId},"
             + "#{order.orderPurchaseAmount},#{order.orderExpectedShare},"
             + "#{order.orderBankcardNum},#{order.orderRedeemShare},"
@@ -23,9 +23,21 @@ public interface TradeMapper {
             + "Order_ExpectedShare AS orderExpectedShare, Order_BankcardNum AS orderBankcardNum, "
             + "Order_RedeemShare AS orderRedeemShare, Order_ExpectedIncome AS orderExpectedIncome, "
             + "Order_Time AS orderTime, Order_Status AS orderStatus "
-            + "FROM `Order` WHERE Order_Id = #{id}")
+            + "FROM `Orders` WHERE Order_Id = #{id}")
     OrderDTO getOrder(@Param("id") Integer orderId);
 
-    @Update("UPDATE Orders SET Order_Status = #{order.orderStatus} WHERE Order_OperatorId=#{order.orderId}")
-    Integer updateOrder(@Param("order")OrderDTO orderDTO);
+    @Update("UPDATE Orders SET " +
+            "Order_Type = #{order.orderType}," +
+            "Order_CustomerId = #{order.orderCustomerId}," +
+            "Order_ProductId = #{order.orderProductId}," +
+            "Order_OperatorId = #{order.orderOperatorId}," +
+            "Order_PurchaseAmount = #{order.orderPurchaseAmount}," +
+            "Order_ExpectedShare = #{order.orderExpectedShare}," +
+            "Order_BankcardNum = #{order.orderBankcardNum}," +
+            "Order_RedeemShare = #{order.orderRedeemShare}," +
+            "Order_ExpectedIncome = #{order.orderExpectedIncome}," +
+            "Order_Time = #{order.orderTime}," +
+            "Order_Status = #{order.orderStatus}" +
+            "WHERE Order_Id = #{order.orderId}")
+    Integer updateOrder(@Param("order") OrderDTO orderDTO);
 }

@@ -13,8 +13,7 @@ public class OrderDTO {
     private String orderBankcardNum;
     private double orderRedeemShare;
     private double orderExpectedIncome;
-    private Date orderTime;
-
+    private String orderTime;
     private String orderStatus;
 
     public Integer getOrderId() {
@@ -97,11 +96,11 @@ public class OrderDTO {
         this.orderExpectedIncome = orderExpectedIncome;
     }
 
-    public Date getOrderTime() {
+    public String getOrderTime() {
         return orderTime;
     }
 
-    public void setOrderTime(Date orderTime) {
+    public void setOrderTime(String orderTime) {
         this.orderTime = orderTime;
     }
 

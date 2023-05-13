@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
     @CloudReference
     CustomerService customerService;
+    @CloudReference
     BankcardService bankcardService;
 
     @RequestMapping("/addCustomer")
