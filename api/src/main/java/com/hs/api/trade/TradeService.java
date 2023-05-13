@@ -5,7 +5,6 @@ import com.hundsun.jrescloud.rpc.annotation.CloudService;
 
 @CloudService(validation = true)
 public interface TradeService {
-    Integer purchase(OrderDTO orderDTO);
-    Integer redemption(OrderDTO orderDTO);
-    Integer revocation(Integer orderId);
+    Integer addOrder(OrderDTO orderDTO);
+    Integer updateOrder(OrderDTO orderDTO);
 }

@@ -1,4 +1,4 @@
-package com.hs.commom;
+package com.hs.common;
 
 public class Result<T> {
     private String code;

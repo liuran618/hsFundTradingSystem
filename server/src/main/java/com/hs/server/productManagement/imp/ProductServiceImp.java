@@ -35,6 +35,7 @@ public class ProductServiceImp implements ProductService {
 
     @Override
     public Integer deleteProduct(Integer productId) {
-        return null;
+        int judge = productMapper.deleteProduct(productId);
+        return judge;
     }
 }
