@@ -7,7 +7,7 @@ public class ShareDTO {
     private Integer shareCustomerId;
     private Integer shareProductId;
     private double shareNum;
-    private Date shareDate;
+    private String shareDate;
 
     public Integer getShareId() {
         return shareId;
@@ -41,11 +41,11 @@ public class ShareDTO {
         this.shareNum = shareNum;
     }
 
-    public Date getShareDate() {
+    public String getShareDate() {
         return shareDate;
     }
 
-    public void setShareDate(Date shareDate) {
+    public void setShareDate(String shareDate) {
         this.shareDate = shareDate;
     }
 }
