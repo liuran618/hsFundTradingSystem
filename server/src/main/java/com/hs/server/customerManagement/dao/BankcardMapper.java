@@ -19,6 +19,16 @@ public interface BankcardMapper {
             + "bankcard_balance AS bankcardBalance FROM Bankcard WHERE bankcard_num=#{num}")
     BankcardDTO getBankcard(String num);
 
+    @Update("UPDATE bankcard SET " +
+            "bankcard_customerid = #{bankcard.bankcardCustomerId}, " +
+            "bankcard_holdername = #{bankcard.bankcardHolderName}, " +
+            "bankcard_holdernum = #{bankcard.bankcardHolderNum}, " +
+            "bankcard_bankname = #{bankcard.bankcardBankname}, " +
+            "bankcard_transpass = #{bankcard.bankcardTransPass}, " +
+            "bankcard_balance = #{bankcard.bankcardBalance} " +
+            "WHERE bankcard_num = #{bankcard.bankcardNum}")
+    Integer updateBankcard(@Param("bankcard") BankcardDTO bankcardDto);
+
     @Delete("DELETE FROM bankcard WHERE bankcard_num = #{num}")
     Integer deleteBankcard(String num);
 }

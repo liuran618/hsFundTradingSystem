@@ -15,5 +15,5 @@ public interface ProdailyMapper {
     @Select("SELECT prodaily_id as prodailyId, prodaily_date as prodailyDate, "
             + "prodaily_netvalue as prodailyNetvalue, prodaily_totalshare as prodailyTotalshare "
             + "FROM Prodaily WHERE prodaily_id = #{prodailyId}")
-    ProdailyDTO getProdaily(@Param("prodailyId") short prodailyId);
+    ProdailyDTO getProdaily(@Param("prodailyId") Integer prodailyId);
 }

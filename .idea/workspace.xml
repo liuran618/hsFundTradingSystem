@@ -6,16 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="13f115ed-ede6-4324-ae68-d05fbf582e43" name="Changes" comment="基本增删改查实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/hs/api/cunstomerManagement/dto/BankcardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/hs/api/cunstomerManagement/dto/BankcardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/hs/api/liquidation/dto/ShareDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/hs/api/liquidation/dto/ShareDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/hs/api/productManagement/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/hs/api/productManagement/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/hs/api/productManagement/dto/ProdailyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/hs/api/productManagement/dto/ProdailyDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/hs/api/trade/TradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/hs/api/trade/TradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/hs/api/trade/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/hs/api/trade/dto/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/hs/client/customerManagement/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/hs/client/customerManagement/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/hs/client/liquidation/controller/liquidationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/hs/client/liquidation/controller/liquidationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/hs/client/productManagemnet/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/hs/client/productManagemnet/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/hs/client/trade/controller/TradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/hs/client/trade/controller/TradeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/customerManagement/dao/BankcardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/customerManagement/dao/BankcardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/liquidation/dao/ShareMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/liquidation/dao/ShareMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/productManagement/dao/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/productManagement/dao/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/trade/dao/TradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/trade/dao/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/productManagement/dao/ProdailyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/productManagement/dao/ProdailyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/productManagement/imp/ProductServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/productManagement/imp/ProductServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/trade/dao/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/trade/dao/OrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hs/server/trade/imp/TradeServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hs/server/trade/imp/TradeServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +170,8 @@
       <workItem from="1683861477372" duration="7663000" />
       <workItem from="1683941021620" duration="588000" />
       <workItem from="1683942609482" duration="2829000" />
-      <workItem from="1683980836492" duration="10178000" />
+      <workItem from="1683980836492" duration="10534000" />
+      <workItem from="1684030175083" duration="8611000" />
     </task>
     <task id="LOCAL-00001" summary="交易模块初步编写">
       <created>1683447175088</created>
@@ -192,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683945860058</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="基本增删改查实现">
+      <created>1683991621161</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683991621161</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

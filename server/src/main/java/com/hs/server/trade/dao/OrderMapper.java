@@ -3,6 +3,8 @@ package com.hs.server.trade.dao;
 import com.hs.api.trade.dto.OrderDTO;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 @Mapper
 public interface OrderMapper {
 
@@ -24,7 +26,16 @@ public interface OrderMapper {
             + "Order_RedeemShare AS orderRedeemShare, Order_ExpectedIncome AS orderExpectedIncome, "
             + "Order_Time AS orderTime, Order_Status AS orderStatus "
             + "FROM `Orders` WHERE Order_Id = #{id}")
-    OrderDTO getOrder(@Param("id") Integer orderId);
+    OrderDTO getOrderById(@Param("id") Integer id);
+
+    @Select("SELECT Order_Id AS orderId, Order_Type AS orderType, "
+            + "Order_CustomerId AS orderCustomerId, Order_ProductId AS orderProductId, "
+            + "Order_OperatorId AS orderOperatorId, Order_PurchaseAmount AS orderPurchaseAmount, "
+            + "Order_ExpectedShare AS orderExpectedShare, Order_BankcardNum AS orderBankcardNum, "
+            + "Order_RedeemShare AS orderRedeemShare, Order_ExpectedIncome AS orderExpectedIncome, "
+            + "Order_Time AS orderTime, Order_Status AS orderStatus "
+            + "FROM `Orders` WHERE Order_CustomerId = #{orderCustomerId}")
+    List<OrderDTO> getOrderByCustomerId(@Param("orderCustomerId") Integer orderCustomerId);
 
     @Update("UPDATE Orders SET " +
             "Order_Type = #{order.orderType}," +

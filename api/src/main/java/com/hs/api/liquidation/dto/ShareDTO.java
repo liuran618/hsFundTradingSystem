@@ -3,41 +3,41 @@ package com.hs.api.liquidation.dto;
 import java.util.Date;
 
 public class ShareDTO {
-    private short shareId;
-    private short shareCustomerId;
-    private short shareProductId;
-    private float shareNum;
+    private Integer shareId;
+    private Integer shareCustomerId;
+    private Integer shareProductId;
+    private double shareNum;
     private Date shareDate;
 
-    public short getShareId() {
+    public Integer getShareId() {
         return shareId;
     }
 
-    public void setShareId(short shareId) {
+    public void setShareId(Integer shareId) {
         this.shareId = shareId;
     }
 
-    public short getShareCustomerId() {
+    public Integer getShareCustomerId() {
         return shareCustomerId;
     }
 
-    public void setShareCustomerId(short shareCustomerId) {
+    public void setShareCustomerId(Integer shareCustomerId) {
         this.shareCustomerId = shareCustomerId;
     }
 
-    public short getShareProductId() {
+    public Integer getShareProductId() {
         return shareProductId;
     }
 
-    public void setShareProductId(short shareProductId) {
+    public void setShareProductId(Integer shareProductId) {
         this.shareProductId = shareProductId;
     }
 
-    public float getShareNum() {
+    public double getShareNum() {
         return shareNum;
     }
 
-    public void setShareNum(float shareNum) {
+    public void setShareNum(double shareNum) {
         this.shareNum = shareNum;
     }
 

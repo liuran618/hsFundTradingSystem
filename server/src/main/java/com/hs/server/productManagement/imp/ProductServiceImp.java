@@ -1,7 +1,9 @@
 package com.hs.server.productManagement.imp;
 
 import com.hs.api.productManagement.ProductService;
+import com.hs.api.productManagement.dto.ProdailyDTO;
 import com.hs.api.productManagement.dto.ProductDTO;
+import com.hs.server.productManagement.dao.ProdailyMapper;
 import com.hs.server.productManagement.dao.ProductMapper;
 import com.hundsun.jrescloud.rpc.annotation.CloudComponent;
 import org.slf4j.Logger;
@@ -14,6 +16,8 @@ public class ProductServiceImp implements ProductService {
 
     @Autowired
     private ProductMapper productMapper;
+    @Autowired
+    private ProdailyMapper prodailyMapper;
 
     @Override
     public Integer addProduct(ProductDTO product) {
@@ -37,5 +41,10 @@ public class ProductServiceImp implements ProductService {
     public Integer deleteProduct(Integer productId) {
         int judge = productMapper.deleteProduct(productId);
         return judge;
+    }
+
+    @Override
+    public ProdailyDTO getProdaily(Integer proDailyId) {
+        return prodailyMapper.getProdaily(proDailyId);
     }
 }

@@ -1,6 +1,7 @@
 package com.hs.client.productManagemnet.controller;
 
 import com.hs.api.productManagement.ProductService;
+import com.hs.api.productManagement.dto.ProdailyDTO;
 import com.hs.api.productManagement.dto.ProductDTO;
 import com.hundsun.jrescloud.rpc.annotation.CloudReference;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,7 @@ public class ProductController {
 
     @RequestMapping("/addProduct")
     public Result<?> addProduct(@RequestBody ProductDTO productDTO){
-        int i = productService.addProduct(productDTO);
+        int judge = productService.addProduct(productDTO);
         return Result.success();
     }
 
@@ -28,11 +29,6 @@ public class ProductController {
 
     @RequestMapping("/updateProduct")
     public Result<?> updateProduct(@RequestBody ProductDTO productDTO){;
-        productDTO.setProductId(1);
-        productDTO.setProductName("ABC Product");
-        productDTO.setProductType("Type A");
-        productDTO.setProductInfo("A is ok");
-        productDTO.setProductManager("小h");
         productService.updateProduct(productDTO);
         return Result.success();
     }
@@ -41,5 +37,11 @@ public class ProductController {
     public Result<?> deleteProduct(@PathVariable("id") Integer id){
         int judge = productService.deleteProduct(id);
         return Result.success();
+    }
+
+    @RequestMapping("/getProdaily/{id}")
+    public Result<?> getProDaily(@PathVariable("id") Integer id){
+        ProdailyDTO prodailyDTO =productService.getProdaily(id);
+        return Result.success(prodailyDTO);
     }
 }

@@ -7,7 +7,7 @@ public class BankcardDTO {
     private String bankcardHolderNum;
     private String bankcardBankname;
     private String bankcardTransPass;
-    private float bankcardBalance;
+    private double bankcardBalance;
 
     public String getBankcardNum() {
         return bankcardNum;
@@ -57,11 +57,11 @@ public class BankcardDTO {
         this.bankcardTransPass = bankcardTransPass;
     }
 
-    public float getBankcardBalance() {
+    public double getBankcardBalance() {
         return bankcardBalance;
     }
 
-    public void setBankcardBalance(float bankcardBalance) {
+    public void setBankcardBalance(double bankcardBalance) {
         this.bankcardBalance = bankcardBalance;
     }
 }

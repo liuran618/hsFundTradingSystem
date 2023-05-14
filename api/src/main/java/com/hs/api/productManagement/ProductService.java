@@ -1,5 +1,6 @@
 package com.hs.api.productManagement;
 
+import com.hs.api.productManagement.dto.ProdailyDTO;
 import com.hs.api.productManagement.dto.ProductDTO;
 import com.hundsun.jrescloud.rpc.annotation.CloudService;
 
@@ -13,5 +14,7 @@ public interface ProductService {
     Integer updateProduct(ProductDTO productDTO);
 
     Integer deleteProduct(Integer productId);
+
+    ProdailyDTO getProdaily(Integer proDailyId);
 
 }

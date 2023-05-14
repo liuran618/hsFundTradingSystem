@@ -3,16 +3,16 @@ package com.hs.api.productManagement.dto;
 import java.util.Date;
 
 public class ProdailyDTO {
-    private short prodailyId;
+    private Integer prodailyId;
     private Date prodailyDate;
-    private float prodailyNetvalue;
-    private float prodailyTotalshare;
+    private double prodailyNetvalue;
+    private double prodailyTotalshare;
 
-    public short getProdailyId() {
+    public Integer getProdailyId() {
         return prodailyId;
     }
 
-    public void setProdailyId(short prodailyId) {
+    public void setProdailyId(Integer prodailyId) {
         this.prodailyId = prodailyId;
     }
 
@@ -24,19 +24,19 @@ public class ProdailyDTO {
         this.prodailyDate = prodailyDate;
     }
 
-    public float getProdailyNetvalue() {
+    public double getProdailyNetvalue() {
         return prodailyNetvalue;
     }
 
-    public void setProdailyNetvalue(float prodailyNetvalue) {
+    public void setProdailyNetvalue(double prodailyNetvalue) {
         this.prodailyNetvalue = prodailyNetvalue;
     }
 
-    public float getProdailyTotalshare() {
+    public double getProdailyTotalshare() {
         return prodailyTotalshare;
     }
 
-    public void setProdailyTotalshare(float prodailyTotalshare) {
+    public void setProdailyTotalshare(double prodailyTotalshare) {
         this.prodailyTotalshare = prodailyTotalshare;
     }
 }
